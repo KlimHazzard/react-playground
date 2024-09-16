@@ -141,6 +141,7 @@ export const relationships = [
     .filter((node) => node.parent !== null)
     .map((node) => ({
       id: `tree_${node.id}`,
+      type: "RELATED_TO",
       from: node.parent,
       to: node.id,
     })),
@@ -148,102 +149,127 @@ export const relationships = [
   // Relationships between properties
   {
     id: "1",
+    type: "RELATED_TO",
     from: "classroom_organization_id",
     to: "organization_id",
   },
   {
     id: "2",
+    type: "RELATED_TO",
     from: "classroom_whatsapp_bot_id",
     to: "whatsapp_bot_id",
   },
   {
     id: "3",
+    type: "RELATED_TO",
     from: "classroom_organization_user_classroom_id",
     to: "classroom_id",
   },
   {
     id: "4",
+    type: "RELATED_TO",
     from: "classroom_organization_user_organization_user_id",
     to: "organization_user_id",
   },
   {
     id: "5",
+    type: "RELATED_TO",
     from: "classroom_organization_user_organization_id",
     to: "organization_id",
   },
   {
     id: "6",
+    type: "RELATED_TO",
     from: "invitation_organization_id",
     to: "organization_id",
   },
   {
     id: "7",
+    type: "RELATED_TO",
     from: "lesson_classroom_id",
     to: "classroom_id",
   },
   {
     id: "8",
+    type: "RELATED_TO",
     from: "lesson_organization_id",
     to: "organization_id",
   },
   {
     id: "9",
+    type: "RELATED_TO",
     from: "lesson_feedback_lesson_id",
     to: "lesson_id",
   },
   {
     id: "10",
+    type: "RELATED_TO",
     from: "lesson_feedback_user_id",
     to: "user_id",
   },
-  { id: "11", from: "message_user_id", to: "user_id" },
+  {
+    id: "11",
+    type: "RELATED_TO",
+    from: "message_user_id",
+    to: "user_id",
+  },
   {
     id: "12",
+    type: "RELATED_TO",
     from: "message_lesson_id",
     to: "lesson_id",
   },
   {
     id: "13",
+    type: "RELATED_TO",
     from: "message_organization_id",
     to: "organization_id",
   },
   {
     id: "14",
+    type: "RELATED_TO",
     from: "message_whatsapp_bot_id",
     to: "whatsapp_bot_id",
   },
   {
     id: "15",
+    type: "RELATED_TO",
     from: "organization_user_organization_id",
     to: "organization_id",
   },
   {
     id: "16",
+    type: "RELATED_TO",
     from: "organization_user_user_id",
     to: "user_id",
   },
   {
     id: "17",
+    type: "RELATED_TO",
     from: "phone_verification_user_id",
     to: "user_id",
   },
   {
     id: "18",
+    type: "RELATED_TO",
     from: "user_current_lesson_id",
     to: "lesson_id",
   },
   {
     id: "19",
+    type: "RELATED_TO",
     from: "user_current_organization_id",
     to: "organization_id",
   },
   {
     id: "20",
+    type: "RELATED_TO",
     from: "whatsapp_bot_organization_id",
     to: "organization_id",
   },
 ].filter((rel) => rel.from !== null && rel.to !== null) as {
   id: string;
+  type: string;
   from: string;
   to: string;
 }[];
