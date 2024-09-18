@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @apply bg-background text-foreground;
 }
 
 code {
@@ -80,3 +81,8 @@ code {
     @apply bg-background text-foreground;
   }
 }
+
+.dark {
+  @apply bg-background text-foreground;
+}
+

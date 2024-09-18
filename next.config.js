@@ -5,6 +5,7 @@ const nextConfig = {
     experimental: {
         esmExternals: true,
     },
+    
     webpack: (config, { isServer }) => {
         if (!isServer) {
             config.resolve.fallback = {
@@ -16,4 +17,4 @@ const nextConfig = {
     },
 }
 
-export default nextConfig;
+module.exports = nextConfig
