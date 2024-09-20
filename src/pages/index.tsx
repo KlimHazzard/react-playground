@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Node from "../components/graphs/node";
+//import Node from "../components/graphs/node";
+import Neo4j from "../components/graphs/neo4j";
 import Messages from "../components/graphs/messages";
 import DataDump from "../components/graphs/datadump";
 import { DarkModeToggle } from "../components/Darkmode";
@@ -10,7 +11,8 @@ const Home: React.FC = () => {
   const renderActivePage = () => {
     switch (activePage) {
       case "node":
-        return <Node />;
+        //return <Node />;
+        return <Neo4j />;
       case "messages":
         return <Messages />;
       case "Admin Messages":
