@@ -19,7 +19,7 @@ const InteractiveNvlWrapper = dynamic(
 const Neo4j: React.FC = () => {
   const [myNodes] = useState<Node[]>([
     { id: "0", size: 20 },
-    { id: "1", size: 50, label: "master" },
+    { id: "1", size: 50 },
   ]);
   const [relationships] = useState<Relationship[]>([
     { id: "10", from: "0", to: "1" },
